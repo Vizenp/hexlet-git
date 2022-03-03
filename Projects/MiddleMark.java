@@ -1,5 +1,5 @@
 import java.util.*;
-public class GetMiddleMark {
+public class MiddleMark {
 	public static void getMiddleMark() {
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Integer> marks = ParseIntInString.parseIntInString(scanner.next());

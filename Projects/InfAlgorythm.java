@@ -19,8 +19,11 @@ public class InfAlgorythm {
 		}
 		return x; //написал Калинский Виталий. упражнение 201
 	}
+
   public static void algorithmPage148(int times){
     String[] words = new String[times];
+    String[] cases = new String[Factorial.getFactorial(times)];
+    int a = 0;
 
     //заполняем список словами
     Scanner scanner = new Scanner(System.in);
@@ -29,12 +32,15 @@ public class InfAlgorythm {
     }
 
     //создаём список возможных случаев
-    String[][] cases = new String[Factorial.getFactorial(times)][times];
-    for (int i = 0; i < cases.length; i++) {
-      for (int j = 0; j < times; j++) {
-        cases[i][j] = words[j] ;
-      }     
+    for(String l1 : words){
+      for(String l2 : words){
+        for(String l3 : words){
+          if(l1 == l2 || l1 == l3 || l2==l3 )continue;
+          cases[a] = l1 + " " + l2 + " " + l3;
+          a++;
+        }
+      }
     }
-    System.out.println(Arrays.deepToString(cases));
+    System.out.println(Arrays.toString(cases));
   }
 }

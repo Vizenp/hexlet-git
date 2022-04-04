@@ -52,8 +52,12 @@ public class SortThing {
                     Files.move(fileFromMove, fileToMove);
                 } catch (FileAlreadyExistsException e) {
                     System.out.println("File is already exists");
+                    Files.delete(fileFromMove);
+                    
                 } catch (NoSuchFileException ex) {
                     System.out.println("OK");
+                } catch( FileSystemException nfe){
+                    System.out.println("Файл "+ file +" занят");
                 }
             }
         }

@@ -42,5 +42,6 @@ public class InfAlgorythm {
       }
     }
     System.out.println(Arrays.toString(cases));
+    System.out.println(cases.length);
   }
 }

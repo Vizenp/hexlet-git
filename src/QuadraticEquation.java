@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class QuadraticEquation {
@@ -22,11 +21,11 @@ public class QuadraticEquation {
     private static void solveUncountable(int a, int b, int c){
         int d = b * b - 4 * a * c;
 
-        //ВЫВОД ДИСКРИМИНАНТА
+        //print discriminant
         if(-4 * a * c < 0) System.out.printf("D = %d%d = %d \n", b * b, -4 * a * c, d);
         else System.out.printf("D = %d + %d = %d \n", b * b, -4 * a * c, d);
 
-        //ВЫВОД РЕШЕНИЙ
+        //print solves
         if(d > 0){
             System.out.printf("x1 = %d%d / %d = %s \n", -b, (int)-Math.sqrt(d), 2 * a, (-b - Math.sqrt(d)) / (2 * a));
             System.out.printf("x2 = %d+%d / %d = %s \n", -b, (int)+Math.sqrt(d), 2 * a, (-b + Math.sqrt(d)) / (2 * a));
@@ -42,11 +41,11 @@ public class QuadraticEquation {
         int k = b/2;
         int d = k * k - a * c;
 
-        //ВЫВОД ДИСКРИМИНАНТА
+        //print discriminant
         if(-a * c < 0) System.out.printf("D = %d%d = %d \n", k * k, - a * c, d);
         else System.out.printf("D = %d + %d = %d \n", k * k, - a * c, d);
 
-        //ВЫВОД РЕШЕНИЙ
+        //print solves
         if(d > 0){
             System.out.printf("x1 = %d%d / %d = %s \n", -k, (int)-Math.sqrt(d), a, (-k - Math.sqrt(d)) / (a));
             System.out.printf("x2 = %d+%d / %d = %s \n", -k, (int)+Math.sqrt(d), a, (-k + Math.sqrt(d)) / (a));
@@ -59,3 +58,4 @@ public class QuadraticEquation {
         }
     }
 }
+

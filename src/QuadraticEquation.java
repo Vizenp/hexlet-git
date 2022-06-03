@@ -19,7 +19,12 @@ public class QuadraticEquation {
         else solveCountable(a, b, c);
     }
     private static void solveUncountable(int a, int b, int c){
+        try{
         int d = b * b - 4 * a * c;
+
+        if(a == 0){
+            throw new ArithmeticException("'а' не дожно быть равно нулю");
+        }
 
         //print discriminant
         if(-4 * a * c < 0) System.out.printf("D = %d%d = %d \n", b * b, -4 * a * c, d);
@@ -36,10 +41,17 @@ public class QuadraticEquation {
         else {
             System.out.println("No solves");
         }
+        }catch(ArithmeticException e){
+            e.printStackTrace();
+        }
     }
     private static void solveCountable(int a, int b, int c){
         int k = b/2;
         int d = k * k - a * c;
+
+        if(a == 0){
+            throw new ArithmeticException("'а' не дожно быть равно нулю");
+        }
 
         //print discriminant
         if(-a * c < 0) System.out.printf("D = %d%d = %d \n", k * k, - a * c, d);

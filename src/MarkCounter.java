@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class MarkCounter {
+    public static void main(String[] args) {
+        markCounter();
+    }
 
     public static void markCounter() {
         Scanner scanner = new Scanner(System.in);

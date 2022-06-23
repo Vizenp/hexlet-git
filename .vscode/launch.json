@@ -1,0 +1,63 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "FactoryMethod.Main",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Humanity",
+            "request": "launch",
+            "mainClass": "Humanity",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch InfAlgorythm",
+            "request": "launch",
+            "mainClass": "InfAlgorythm",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch MarkCounter",
+            "request": "launch",
+            "mainClass": "MarkCounter",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuadraticEquation",
+            "request": "launch",
+            "mainClass": "QuadraticEquation",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortThing",
+            "request": "launch",
+            "mainClass": "SortThing",
+            "projectName": "JavaLearning_d5d1ee06"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "JavaLearning_d5d1ee06"
+        }
+    ]
+}

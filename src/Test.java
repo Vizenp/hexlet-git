@@ -3,14 +3,12 @@ import javax.swing.*;
 public class Test {
     public static void main(String[] args) {
         Test someClass = new Test();
-        MyClass myClass = new MyClass();
+        Button button = new Button();
 
-    //инициализируем колбек, передавая методу registerCallBack экземпляр MyClass, реализующий интерфейс колбек
-        someClass.registerCallBack(myClass);
+        someClass.registerCallBack(button);
         someClass.doSomething();
 
     }
-    // создаем колбек и его метод
     interface Callback{
         void callingBack();
     }
@@ -22,11 +20,11 @@ public class Test {
     }
 
     void doSomething(){
-        System.out.println("doSomething");
+        System.out.println("button is pressed");
         callback.callingBack();
     }
 }
-class MyClass implements Test.Callback {
+class Button implements Test.Callback {
 
     @Override
     public void callingBack() {

@@ -1,33 +1,43 @@
-import javax.swing.*;
+import java.util.Arrays;
 
 public class Test {
+    static int[] array = { 1, 4, 7, 3, 5, 6, 2, 8, 9, 0 };
+
     public static void main(String[] args) {
-        Test someClass = new Test();
-        Button button = new Button();
-
-        someClass.registerCallBack(button);
-        someClass.doSomething();
-
-    }
-    interface Callback{
-        void callingBack();
+        System.out.println(Arrays.toString(array));
+        del(array, 3);
+        addIn(array, 3, 3);
+        System.out.println(Arrays.toString(array));
     }
 
-    Callback callback;
-
-    public void registerCallBack(Callback callback){
-        this.callback = callback;
+    static int search(int[] arr, int el) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == el)
+                return i;
+        }
+        return -1;
     }
 
-    void doSomething(){
-        System.out.println("button is pressed");
-        callback.callingBack();
-    }
-}
-class Button implements Test.Callback {
+    static void del(int[] arr, int el) {
+        int index = search(arr, el);
+        arr[index] = 0;
+        try {
+            for (int i = index; i < arr.length; i++) {
+                arr[i] = arr[i + 1];
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
 
-    @Override
-    public void callingBack() {
-        System.out.println("Вызов метода обратного вызова");
+        }
     }
+
+    static void addIn(int[] arr, int el, int index) {
+        for (int i = arr.length - 1; i > index; i--) {
+            System.out.println(Arrays.toString(arr));
+            System.out.println("yes");
+            arr[i] = arr[i - 1];
+        }
+        arr[index] = el;
+    }
+
+    
 }
